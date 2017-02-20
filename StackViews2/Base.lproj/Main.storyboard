@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StackViews2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,219 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58P-lK-Lb8">
+                                <rect key="frame" x="62" y="208" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="1v9-eh-F2Q"/>
+                                    <constraint firstAttribute="height" constant="250" id="6Vj-dt-Zev"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="200"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cdh-gL-Pwv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="640"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKr-E5-Mc4">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwm-nI-8wZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="0.43529411764705883" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
+                                                <state key="normal" title="⚙️ SETTINGS">
+                                                    <color key="titleColor" red="0.94958181361162797" green="1" blue="0.93545136363090742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onSettingsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TbU-D0-Aug"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.43529411764705883" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="umV-YU-yrq"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lqV-nx-Tau">
+                                        <rect key="frame" x="0.0" y="80" width="375" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vM-4k-fBF">
+                                                <rect key="frame" x="145" y="18" width="86" height="44"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
+                                                <state key="normal" title="🍕 Pizza">
+                                                    <color key="titleColor" red="0.94958181360000005" green="1" blue="0.93545136360000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pizzaButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bba-kQ-I4c"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.5607843137254902" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="6vM-4k-fBF" firstAttribute="centerX" secondItem="lqV-nx-Tau" secondAttribute="centerX" id="aFP-H9-sZU"/>
+                                            <constraint firstItem="6vM-4k-fBF" firstAttribute="centerY" secondItem="lqV-nx-Tau" secondAttribute="centerY" id="fFB-hb-T7Y"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alk-IE-VHP">
+                                        <rect key="frame" x="0.0" y="160" width="375" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLt-fb-DOr">
+                                                <rect key="frame" x="142" y="18" width="92" height="44"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
+                                                <state key="normal" title="❤️ Heart">
+                                                    <color key="titleColor" red="0.94958181360000005" green="1" blue="0.93545136360000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="heartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2BP-9Q-zlx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.62745098039215685" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="hLt-fb-DOr" firstAttribute="centerX" secondItem="alk-IE-VHP" secondAttribute="centerX" id="9Lp-hd-5Tv"/>
+                                            <constraint firstItem="hLt-fb-DOr" firstAttribute="centerY" secondItem="alk-IE-VHP" secondAttribute="centerY" id="AVn-Qz-CLd"/>
+                                            <constraint firstItem="hLt-fb-DOr" firstAttribute="centerX" secondItem="alk-IE-VHP" secondAttribute="centerX" id="iS4-11-ZSl"/>
+                                            <constraint firstItem="hLt-fb-DOr" firstAttribute="centerY" secondItem="alk-IE-VHP" secondAttribute="centerY" id="wIc-YC-7bo"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7CZ-nC-mv3">
+                                        <rect key="frame" x="0.0" y="240" width="375" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hg-qf-esF">
+                                                <rect key="frame" x="157" y="18" width="62" height="44"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
+                                                <state key="normal" title="👍 Up">
+                                                    <color key="titleColor" red="0.94958181360000005" green="1" blue="0.93545136360000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="upButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ec4-ag-G70"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.70196078431372544" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="5hg-qf-esF" firstAttribute="centerX" secondItem="7CZ-nC-mv3" secondAttribute="centerX" id="DDg-VU-NVJ"/>
+                                            <constraint firstItem="5hg-qf-esF" firstAttribute="centerX" secondItem="7CZ-nC-mv3" secondAttribute="centerX" id="IiS-hn-0jg"/>
+                                            <constraint firstItem="5hg-qf-esF" firstAttribute="centerY" secondItem="7CZ-nC-mv3" secondAttribute="centerY" id="RHh-T6-zzQ"/>
+                                            <constraint firstItem="5hg-qf-esF" firstAttribute="centerY" secondItem="7CZ-nC-mv3" secondAttribute="centerY" id="cxh-a1-4RE"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRP-O0-C4Y">
+                                        <rect key="frame" x="0.0" y="320" width="375" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecO-wy-ZSe">
+                                                <rect key="frame" x="124" y="18" width="127" height="44"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
+                                                <state key="normal" title="🐘 Elephant">
+                                                    <color key="titleColor" red="0.94958181360000005" green="1" blue="0.93545136360000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="elephantButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="deJ-wd-Afx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.75686274509803919" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="ecO-wy-ZSe" firstAttribute="centerY" secondItem="jRP-O0-C4Y" secondAttribute="centerY" id="VWj-z8-1kf"/>
+                                            <constraint firstItem="ecO-wy-ZSe" firstAttribute="centerX" secondItem="jRP-O0-C4Y" secondAttribute="centerX" id="g6C-RM-weC"/>
+                                            <constraint firstItem="ecO-wy-ZSe" firstAttribute="centerX" secondItem="jRP-O0-C4Y" secondAttribute="centerX" id="jDN-Wc-vVg"/>
+                                            <constraint firstItem="ecO-wy-ZSe" firstAttribute="centerY" secondItem="jRP-O0-C4Y" secondAttribute="centerY" id="wzg-Jf-089"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JvL-CW-MOe">
+                                        <rect key="frame" x="0.0" y="400" width="375" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ru0-X4-1Ch">
+                                                <rect key="frame" x="139" y="18" width="97" height="44"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
+                                                <state key="normal" title="🌏 World">
+                                                    <color key="titleColor" red="0.94958181360000005" green="1" blue="0.93545136360000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="worldButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uCv-Ns-Qrv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.792156862745098" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="ru0-X4-1Ch" firstAttribute="centerX" secondItem="JvL-CW-MOe" secondAttribute="centerX" id="QbF-12-9N6"/>
+                                            <constraint firstItem="ru0-X4-1Ch" firstAttribute="centerY" secondItem="JvL-CW-MOe" secondAttribute="centerY" id="nLs-0k-V2K"/>
+                                            <constraint firstItem="ru0-X4-1Ch" firstAttribute="centerX" secondItem="JvL-CW-MOe" secondAttribute="centerX" id="wEn-xW-xAT"/>
+                                            <constraint firstItem="ru0-X4-1Ch" firstAttribute="centerY" secondItem="JvL-CW-MOe" secondAttribute="centerY" id="yx8-qu-uyG"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OaD-eq-AXe">
+                                        <rect key="frame" x="0.0" y="480" width="375" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r85-Pf-1on">
+                                                <rect key="frame" x="152" y="18" width="71" height="44"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
+                                                <state key="normal" title="🌝 Sun">
+                                                    <color key="titleColor" red="0.94958181360000005" green="1" blue="0.93545136360000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="sunButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PKt-nl-Nmt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.83529411764705885" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="r85-Pf-1on" firstAttribute="centerX" secondItem="OaD-eq-AXe" secondAttribute="centerX" id="Cgs-5e-35q"/>
+                                            <constraint firstItem="r85-Pf-1on" firstAttribute="centerY" secondItem="OaD-eq-AXe" secondAttribute="centerY" id="SQ9-Oz-E6v"/>
+                                            <constraint firstItem="r85-Pf-1on" firstAttribute="centerY" secondItem="OaD-eq-AXe" secondAttribute="centerY" id="WZO-5O-4RQ"/>
+                                            <constraint firstItem="r85-Pf-1on" firstAttribute="centerX" secondItem="OaD-eq-AXe" secondAttribute="centerX" id="tEC-GS-UQj"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tq2-pZ-1Wc">
+                                        <rect key="frame" x="0.0" y="560" width="375" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGA-CP-bBp">
+                                                <rect key="frame" x="133" y="18" width="109" height="44"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
+                                                <state key="normal" title="🍏 Äpplen">
+                                                    <color key="titleColor" red="0.94958181360000005" green="1" blue="0.93545136360000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="appleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iff-bA-SvL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.8784313725490196" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="KGA-CP-bBp" firstAttribute="centerX" secondItem="Tq2-pZ-1Wc" secondAttribute="centerX" id="7cV-nq-TA5"/>
+                                            <constraint firstItem="KGA-CP-bBp" firstAttribute="centerY" secondItem="Tq2-pZ-1Wc" secondAttribute="centerY" id="ANa-ra-1uN"/>
+                                            <constraint firstItem="KGA-CP-bBp" firstAttribute="centerY" secondItem="Tq2-pZ-1Wc" secondAttribute="centerY" id="ibS-hQ-Rhn"/>
+                                            <constraint firstItem="KGA-CP-bBp" firstAttribute="centerX" secondItem="Tq2-pZ-1Wc" secondAttribute="centerX" id="izH-0h-p32"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.97254901960784312" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="58P-lK-Lb8" firstAttribute="centerX" secondItem="cdh-gL-Pwv" secondAttribute="centerX" id="4WY-Cl-2Ku"/>
+                            <constraint firstItem="cdh-gL-Pwv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cTk-9K-jb7"/>
+                            <constraint firstItem="58P-lK-Lb8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gUq-aB-Wvt"/>
+                            <constraint firstAttribute="trailing" secondItem="cdh-gL-Pwv" secondAttribute="trailing" id="rOb-Xa-YXY"/>
+                            <constraint firstItem="cdh-gL-Pwv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wOJ-qd-ztn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emojiText" destination="58P-lK-Lb8" id="rhg-Gd-p7u"/>
+                        <outletCollection property="emojiView" destination="lqV-nx-Tau" collectionClass="NSMutableArray" id="YQB-Vt-b2c"/>
+                        <outletCollection property="emojiView" destination="alk-IE-VHP" collectionClass="NSMutableArray" id="cnc-Bn-qjH"/>
+                        <outletCollection property="emojiView" destination="7CZ-nC-mv3" collectionClass="NSMutableArray" id="iB4-kF-poR"/>
+                        <outletCollection property="emojiView" destination="JvL-CW-MOe" collectionClass="NSMutableArray" id="whF-cc-lc1"/>
+                        <outletCollection property="emojiView" destination="OaD-eq-AXe" collectionClass="NSMutableArray" id="aWN-f4-LNB"/>
+                        <outletCollection property="emojiView" destination="Tq2-pZ-1Wc" collectionClass="NSMutableArray" id="kxU-g9-sIw"/>
+                        <outletCollection property="emojiView" destination="jRP-O0-C4Y" collectionClass="NSMutableArray" id="69T-3x-Tag"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>
